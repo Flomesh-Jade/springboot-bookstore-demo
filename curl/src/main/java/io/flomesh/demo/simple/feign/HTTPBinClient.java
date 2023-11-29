@@ -7,5 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface HTTPBinClient {
 
     @GetMapping("/")
+    @RequestMapping(value = "/",headers = {"proxy-tag=httpbin"})
     String index();
 }
